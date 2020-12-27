@@ -1,17 +1,17 @@
 ''' General functions '''
-
-from random_word import RandomWords
+from random_words import RandomWords
 from textformat import timeAndText
 import time
 
 def getRandomWordList():
     list = []
+    timeAndText('Generating random word list')
     while len(list) < 40:
         try:
-            r = RandomWords()
-            list = r.get_random_words()
+            rw = RandomWords()
+            list = rw.random_words(count=40)
             print(list)
         except:
-            timeAndText('No word list generated... trying again.')
-            time.sleep(2)
-    timeAndText('Random word list geberated')
+            timeAndText('.')
+            time.sleep(4)
+    timeAndText('Random word list generated')
