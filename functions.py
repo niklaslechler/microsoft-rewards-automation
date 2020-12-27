@@ -10,8 +10,11 @@ def getRandomWordList():
         try:
             rw = RandomWords()
             list = rw.random_words(count=40)
-            print(list)
         except:
             timeAndText('.')
             time.sleep(4)
     timeAndText('Random word list generated')
+
+def openPage(driver, url):
+    driver.get(url)
+    time.sleep(3)
