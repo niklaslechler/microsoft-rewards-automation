@@ -12,6 +12,9 @@ ma.openRewardsPage(driver)
 ''' Bing search '''
 ma.searchForWordList(driver, randomWordList)
 
+''' Print current stats '''
+
+
 ''' Ending script '''
 timeAndText('Closing script')
 driver.close()

@@ -6,6 +6,7 @@ import functions as f
 import driver as d
 import config as c
 import time
+import random as r
 
 # ToDo: Check if login was successfull
 def loginToMicrosoft(driver):
@@ -27,11 +28,18 @@ def openRewardsPage(driver):
 
 def singleSearchBing(driver, searchEntry: str):
     d.openPage(driver, 'https://www.bing.com/search?q={}'.format(searchEntry))
-    time.sleep(2)
 
-def searchForWordList(driver, wordList: list):
+def multipleSearchBing(driver, wordList: list):
     for word in wordList:
         timeAndText('Searching for {}'.format(word))
         singleSearchBing(driver, word)
         # ToDo: May needs a check if search was successfull
         timeAndText('Successfull searched for {}'.format(word))
+
+def searchForWordList(driver, wordList: list):
+    if c.randomizeSearchPause:
+        multipleSearchBing(driver, wordList)
+        time.sleep(r.randint(c.boundary.get(min), c.boundary.get(max)))
+    else:
+        multipleSearchBing(driver, wordList)
+        time.sleep(c.searchPause)

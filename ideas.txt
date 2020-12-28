@@ -1,0 +1,1 @@
+- Depending on page access (germany, us, uk, etc.) we may need different xpath tags/urls etc.
