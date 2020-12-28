@@ -14,7 +14,3 @@ def getRandomWordList():
             timeAndText('.')
             time.sleep(4)
     timeAndText('Random word list generated')
-
-def openPage(driver, url):
-    driver.get(url)
-    time.sleep(3)

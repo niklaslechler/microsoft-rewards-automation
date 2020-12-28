@@ -1,4 +1,3 @@
-from selenium.webdriver.common.keys import Keys
 from textformat import timeAndText
 import time, config, functions as f, driver as d, actions as ma
 
@@ -6,8 +5,13 @@ import time, config, functions as f, driver as d, actions as ma
 driver = d.initalizeDriver()
 randomWordList = f.getRandomWordList()
 
-''' Login to microsoft '''
-ma.loginToMicrosoft(driver, config.email, config.password)
+''' Login to microsoft and opening rewards '''
+ma.loginToMicrosoft(driver)
+ma.openRewardsPage(driver)
+
+''' Bing search '''
+ma.searchForWordList(driver, randomWordList)
 
 ''' Ending script '''
+timeAndText('Closing script')
 driver.close()
