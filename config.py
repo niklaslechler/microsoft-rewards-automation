@@ -1,7 +1,10 @@
-# Enter your Microsoft e-Mail
+# Enter your Microsoft credentials
 email = 'testpurpose123@outlook.de'
-# Enter your password
 password = 'tester123'
 
-# If True -> Browser won't be displayed
-optionHeadless = False
+# Search entries amount
+# Pro Tip: Use your initial search amount + 3
+searchEntriesAmount = 40
+
+# Browser settings
+optionHeadless = False # If True -> Browser won't be displayed
