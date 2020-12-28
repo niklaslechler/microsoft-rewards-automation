@@ -7,7 +7,7 @@ import driver as d
 import config as c
 import time
 
-# Check if login was successfull
+# ToDo: Check if login was successfull
 def loginToMicrosoft(driver):
     timeAndText('Logging in to microsoft account')
     d.openPage(driver, 'https://login.live.com/login.srf')
@@ -23,8 +23,7 @@ def loginToMicrosoft(driver):
     timeAndText('Login successfull')
 
 def openRewardsPage(driver):
-    timeAndText('Opening Microsoft Rewards page')
-    d.openPage(driver, 'https://account.microsoft.com/rewards')
+    d.openPage(driver, 'https://account.microsoft.com/rewards', 'Microsoft Rewards')
 
 def singleSearchBing(driver, searchEntry):
     d.openPage(driver, 'https://www.bing.com/search?q={}'.format(searchEntry))
@@ -34,5 +33,5 @@ def searchForWordList(driver, wordList):
     for word in wordList:
         timeAndText('Searching for {}'.format(word))
         singleSearchBing(driver, word)
-        # May needs a check if search was successfull
+        # ToDo: May needs a check if search was successfull
         timeAndText('Successfull searched for {}'.format(word))
