@@ -12,7 +12,7 @@ def initalizeDriver():
     timeAndText('Driver initalized successfully')
     return driver
 
-def openPage(driver, url, pageName=None):
+def openPage(driver, url: str, pageName=None):
     if pageName is not None: timeAndText('Opening {} page'.format(pageName))
     driver.get(url)
     time.sleep(3)

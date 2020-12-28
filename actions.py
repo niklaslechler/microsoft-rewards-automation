@@ -25,11 +25,11 @@ def loginToMicrosoft(driver):
 def openRewardsPage(driver):
     d.openPage(driver, 'https://account.microsoft.com/rewards', 'Microsoft Rewards')
 
-def singleSearchBing(driver, searchEntry):
+def singleSearchBing(driver, searchEntry: str):
     d.openPage(driver, 'https://www.bing.com/search?q={}'.format(searchEntry))
     time.sleep(2)
 
-def searchForWordList(driver, wordList):
+def searchForWordList(driver, wordList: list):
     for word in wordList:
         timeAndText('Searching for {}'.format(word))
         singleSearchBing(driver, word)

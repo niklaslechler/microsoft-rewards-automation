@@ -7,7 +7,7 @@ import config as c
 def getRandomWordList():
     list = []
     timeAndText('Generating random word list')
-    while len(list) < c.searchEntries:
+    while len(list) < c.searchEntriesAmount:
         try:
             rw = RandomWords()
             list = rw.random_words(count=c.searchEntriesAmount)
