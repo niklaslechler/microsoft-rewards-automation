@@ -1,4 +1,6 @@
 # Enter your Microsoft credentials
+# email = 'testpurpose123@outlook.de'
+# password = 'tester123'
 email = 'testpurpose123@outlook.de'
 password = 'tester123'
 
