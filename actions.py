@@ -23,8 +23,14 @@ def loginToMicrosoft(driver):
     time.sleep(3)
     timeAndText('Login successfull')
 
+def checkPage(driver, url):
+    return driver.current_url == url
+
 def openRewardsPage(driver):
-    d.openPage(driver, 'https://account.microsoft.com/rewards', 'Microsoft Rewards')
+    d.openPage(driver, 'https://account.microsoft.com/rewards/', 'Microsoft Rewards')
+
+def checkRewardsPage(driver):
+    if not checkPage(driver, 'https://account.microsoft.com/rewards/'): openRewardsPage(driver)
 
 def singleSearchBing(driver, searchEntry: str):
     d.openPage(driver, 'https://www.bing.com/search?q={}'.format(searchEntry))
