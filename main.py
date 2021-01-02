@@ -13,7 +13,7 @@ ma.openRewardsPage(driver)
 ma.searchForWordList(driver, randomWordList)
 
 ''' Print current stats '''
-print(s.getAllStats(driver))
+#print(s.getAllStats(driver))
 
 ''' Ending script '''
 timeAndText('Closing script')
