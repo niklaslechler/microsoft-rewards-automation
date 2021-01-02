@@ -9,12 +9,11 @@ randomWordList = f.getRandomWordList()
 ma.loginToMicrosoft(driver)
 ma.openRewardsPage(driver)
 
+''' Saving starting stats '''
+f.writeLoginData(driver)
+
 ''' Bing search '''
-ma.searchForWordList(driver, randomWordList)
+#ma.searchForWordList(driver, randomWordList)
 
-''' Print current stats '''
-#print(s.getAllStats(driver))
-
-''' Ending script '''
-timeAndText('Closing script')
-driver.close()
+''' Ending script and saving new stats '''
+f.closeScript(driver)
